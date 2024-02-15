@@ -1,0 +1,797 @@
+// this is shared mixins file for all components from the app,
+// there you can easily add your own variables / imports or redefine
+// existing without touching default packages for future updates
+@import 'app/@vb/css/mixins.scss'; // import KIT mixins
+
+// $text: #000;
+// $success: green;
+
+// .ant-modal-body {
+//   display: flex;
+// }
+
+html {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+div::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+div {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+div::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.ql-container.ql-snow {
+  border: none;
+}
+
+.ql-toolbar.ql-snow {
+  border: none;
+}
+
+.ql-editor {
+  padding: 1px 1px;
+}
+
+.mention {
+  background-color: #faf9bc !important;
+}
+
+.timeClass {
+  line-height: 1;
+  font-size: rem(14);
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 8px 0 !important;
+}
+
+.ant-table-thead > tr > th {
+  padding: 5px;
+  border-bottom: 2px solid #d9d9d9;
+  vertical-align: top;
+}
+
+:host-context([data-vb-theme='default']) {
+  ::ng-deep .ant-table-thead > tr > th {
+    background-color: #ffffff !important;
+  }
+}
+
+:host-context([data-vb-theme='dark']) {
+  ::ng-deep .ant-table-thead > tr > th {
+    background-color: #232135 !important;
+  }
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  z-index: -1;
+  left: 0%;
+  right: 0%;
+}
+
+.name {
+  top: 60px;
+}
+
+.email {
+  top: 95px;
+}
+
+.phone {
+  top: 120px;
+}
+
+::ng-deep .ant-popover-content {
+  width: 400px !important;
+}
+
+::ng-deep .ant-popover-inner-content {
+  padding: 0px !important;
+}
+
+.profile-page .page-header {
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.header-filter:before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: '';
+}
+
+.main-raised {
+  margin: -60px 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12),
+    0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  background: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+:host-context([data-vb-theme='dark']) {
+  ::ng-deep .main {
+    background: #232135;
+  }
+}
+
+.profile-page .profile {
+  text-align: center;
+}
+
+.profile-page .profile img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.img-raised {
+  box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.profile-content {
+  height: 145px;
+}
+
+// buttons
+.button-9 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #ff991f;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 4px;
+  //   min-height: 3rem;
+  padding: calc(8px - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-9:hover,
+.button-9:focus {
+  background-color: #ffb459;
+  border: 1px solid #ffb459;
+  color: #fff;
+}
+
+.button-9:hover {
+  transform: translateY(-1px);
+}
+
+.button-9:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.button-10 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #4b7cf3;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 4px;
+  //   min-height: 3rem;
+  padding: calc(8px - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-10:hover,
+.button-10:focus {
+  background-color: #7ca2ff;
+  border: 1px solid #7ca2ff;
+  color: #fff;
+}
+
+.button-10:hover {
+  transform: translateY(-1px);
+}
+
+.button-10:active {
+  background-color: #4b7cf3;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.button-d {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: transparent;
+  border: 1px solid #4b7cf3;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #4b7cf3;
+  cursor: pointer;
+  display: inline-flex;
+  // font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 4px;
+  padding: calc(8px - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-d:hover,
+.button-d:focus {
+  background-color: transparent;
+  border: 1px solid #4b7cf3;
+  color: #4b7cf3;
+}
+
+.button-d:hover {
+  transform: translateY(-1px);
+}
+
+.button-d:active {
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+//delete red button
+.delete-btn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: transparent;
+  border: 1px solid red;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: red;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 4px;
+  padding: calc(8px - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  background-color: transparent;
+  border: 1px solid rgb(254, 44, 44);
+  color: rgb(255, 41, 41);
+}
+
+.delete-btn:hover {
+  transform: translateY(-1px);
+}
+
+.delete-btn:active {
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+table {
+  width: 100%;
+}
+
+:host-context([data-vb-theme='dark']) {
+  ::ng-deep table,
+  mat-paginator,
+  th {
+    background: $dark-gray-6;
+    color: $dark-gray-1;
+  }
+}
+
+.mat-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  padding-right: 5px;
+  cursor: pointer;
+  color: #595c97;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: $primary !important;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-inner-container,
+.mat-checkbox-indeterminate .mat-checkbox-inner-container {
+  border-color: $primary !important;
+}
+
+::ng-deep .mat-checkbox-indeterminate .mat-checkbox-background,
+::ng-deep .mat-checkbox-indeterminate .mat-checkbox-inner-container {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.mat-row.highlighted {
+  background-color: #ddecfd !important;
+}
+
+::ng-deep .ant-popover-inner {
+  padding: 8px 12px !important;
+}
+
+::ng-deep td.mat-cell {
+  padding: 0 10px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 5px !important;
+}
+
+// [data-vb-theme="dark"]
+// .highlight tr:nth-child(odd) {
+//   background-color: rgb(244, 249, 252);
+// }
+
+:host-context([data-vb-theme='default']) {
+  ::ng-deep .highlight tr:nth-child(even) {
+    background-color: rgb(244, 249, 252);
+  }
+}
+
+:host-context([data-vb-theme='dark']) {
+  ::ng-deep .highlight tr:nth-child(even) {
+    background-color: #232135;
+  }
+}
+
+.ant-table-measure-now td {
+  border: none !important;
+  padding: 0 !important;
+}
+
+::ng-deep .ant-popover-buttons {
+  margin-bottom: 4px;
+  text-align: center !important;
+}
+
+.button-i {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #4b7cf3;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 4px;
+  padding: calc(8px - 1px) calc(1.5rem - 0px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  height: 35px;
+}
+
+.button-i:hover,
+.button-i:focus {
+  background-color: #7ca2ff;
+  border: 1px solid #7ca2ff;
+  color: #fff;
+}
+
+.button-i:hover {
+  transform: translateY(-1px);
+}
+
+.button-i:active {
+  background-color: #4b7cf3;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 2px;
+  height: 1.6em;
+  background-color: rgba(0, 0, 0, 0.06);
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+  content: '';
+}
+
+.ant-table {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+::ng-deep .ant-table-column-sorter-full {
+  position: absolute !important;
+  right: 28px !important;
+  padding-bottom: 2px;
+}
+
+.search-box {
+  padding: 8px;
+}
+
+.search-box input {
+  width: 188px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.search-box button {
+  width: 90px;
+}
+
+.search-button {
+  margin-right: 8px;
+}
+
+:host-context([data-vb-theme='default']) {
+  ::ng-deep .mat-card {
+    background-color: #fff;
+  }
+}
+
+:host-context([data-vb-theme='dark']) {
+  ::ng-deep .mat-card {
+    background-color: #232135;
+  }
+}
+
+:host-context([data-vb-theme='default']) {
+  ::ng-deep .t-text {
+    color: #5f6294;
+  }
+}
+
+:host-context([data-vb-theme='dark']) {
+  ::ng-deep .t-text {
+    color: #aeaee0;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #aeaee0 !important;
+  }
+
+  ::ng-deep .mat-select-value {
+    color: #aeaee0 !important;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: #aeaee0 !important;
+  }
+}
+
+:host-context([data-vb-theme='default']) {
+  ::ng-deep .t-box {
+    background-color: #fafafa;
+  }
+}
+
+:host-context([data-vb-theme='dark']) {
+  ::ng-deep .t-box {
+    background-color: #232135;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+::ng-deep .ant-table-measure-now {
+  display: none !important;
+}
+
+.global-container {
+  height: calc(100vh - 90px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-bottom: 40px;
+}
+
+.greyed-out-input {
+  color: #b8b8b8; /* Grey text color */
+  cursor: not-allowed; /* Change cursor to 'not allowed' */
+  pointer-events: none; /* Disable pointer events */
+}
+
+ng-otp-input input {
+  width: 40px !important;
+  height: 40px !important;
+}
+ng-otp-input {
+  text-align: center;
+}
+
+@import 'src/mixins.scss';
+
+.mat-cell {
+  padding-right: 10px;
+  padding-left: 0px;
+  width: 150px;
+  /* padding-right: 20px;set the width of each cell */
+  // height: 50px; /* set the height of each cell */
+}
+
+.mat-table-wrapper {
+  overflow-x: auto;
+}
+
+.form-field-wrapper {
+  position: relative;
+  padding-bottom: 20px;
+  /* add some padding to make room for the label */
+}
+
+.form-field-wrapper label {
+  position: absolute;
+  top: -20px;
+  /* move the label above the form field */
+  // left: 10px;
+  font-size: 12px;
+  color: #44546f;
+  pointer-events: none;
+  /* make sure the label doesn't interfere with input focus */
+}
+
+.custom-appearance {
+  background-color: rgb(132, 200, 255);
+  /* Set the desired background color */
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  /* Set the desired border properties */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.custom-appearance.mat-form-field-underline {
+  border: none;
+  /* Remove the default underline */
+}
+
+.custom-appearance.mat-focused {
+  border-color: blue;
+  /* Set the desired border color when focused */
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.2);
+}
+
+.custom-appearance.mat-form-field-appearance-fill .mat-form-field-wrapper {
+  padding: 4px;
+  /* Adjust the padding to match the fill appearance */
+  border-radius: 4px;
+  // border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.form-field-wrapper {
+  position: relative;
+  padding-bottom: 20px;
+  /* add some padding to make room for the label */
+}
+
+.form-field-wrapper label {
+  position: absolute;
+  top: -20px;
+  /* move the label above the form field */
+  // left: 10px;
+  font-size: 12px;
+  color: #44546f;
+  pointer-events: none;
+  /* make sure the label doesn't interfere with input focus */
+}
+
+.dis {
+  display: flex;
+  align-items: center;
+}
+
+.dis-flex {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+::ng-deep.mat-form-field-underline {
+  background-color: #e2e3f8 !important;
+}
+
+::ng-deep .mat-select-arrow {
+  border: none !important;
+}
+
+.mff-style {
+  margin: 0%;
+  padding: 0em 0em 0em 0em;
+}
+
+.text-d {
+  border: none;
+  outline: none;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+.required {
+  color: red;
+  margin-left: 3px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  vertical-align: initial;
+}
+
+::ng-deep .ant-select-selector {
+  border-radius: 4px !important;
+  border-color: rgba(213, 213, 213, 0.87) !important;
+  box-shadow: none !important;
+  min-height: 50px !important;
+}
+
+::ng-deep .ant-select-selection-placeholder {
+  color: rgba(125, 125, 125, 0.87) !important;
+}
+
+::ng-deep .ant-select {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.small-cell {
+  padding: 4px;
+  /* Adjust the padding value as needed */
+  font-size: 12px;
+  /* Adjust the font-size value as needed */
+}
+
+nz-col {
+  padding: 10px 0;
+}
+
+.group {
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: 25px 0px 0px 10px;
+  margin-right: 8%;
+}
+
+// ::ng-deep .mat-form-field-wrapper{
+//   padding-bottom: 0 !important;
+// }
+
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+//   padding: 10px 0 10px 0 !important;
+//   border-top: 0.3em solid transparent;
+// }
+
+.search-container {
+  display: flex;
+  justify-content: space-between; // Positions the input on the right side
+  align-items: center; // Centers vertically if needed
+  padding: 8px; // Add padding as needed
+  width: 300px; // Set the desired width
+}
+
+.content-overflow {
+  height: 62vh;
+  overflow: auto;
+}
