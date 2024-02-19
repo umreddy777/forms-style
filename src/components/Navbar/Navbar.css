@@ -1,0 +1,22 @@
+.links-style{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.background{
+    background-color: black;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.nav-container{
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav-link{
+    color: aliceblue;
+    text-decoration: none;
+}
