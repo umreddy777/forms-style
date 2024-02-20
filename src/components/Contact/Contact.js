@@ -1,16 +1,18 @@
 import React from 'react'
 import './Contact.css'
-import { Link } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
+import Solar from '../../Images/solar_system_vedio.mp4'
+import Navbar from '../Navbar/Navbar'
 
 function Contact() {
   return (
     <>
     <Navbar/>
-    <div>Contact</div>
-    <div><Link style={{marginRight: "30px"}} to="/" className='button-29'>Back</Link></div>
-    <div>
-      
+    <div className='hero'>
+      <video autoPlay loop muted playsInline>
+        <source src={Solar} type='video/mp4'/>
+        </video>
+        <span className='heading'>Deep dive into the space.</span>
+        <button className='shadow__btn'>Explore</button>
     </div>
     </>
   )
