@@ -667,7 +667,7 @@ ng-otp-input {
   border-color: #4b7cf3 !important;
 }
 
-.input-green {
+::ng-deep .input-green {
   color: red !important;
   border-color: #4b7cf3 !important;
   font-size: 20px !important;
